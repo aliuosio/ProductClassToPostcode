@@ -1,7 +1,7 @@
 <?php
 /**
  * @author     Osiozekhai Aliu
- * @package    BIWAC_AssemblyService
+ * @package    BIWAC_ProductClassToPostcode
  * @copyright  Copyright (c) 2024 BIWAC
  *
  * For the full copyright and license information, please view the LICENSE
