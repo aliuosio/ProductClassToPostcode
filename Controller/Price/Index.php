@@ -20,16 +20,20 @@ class Index implements ActionInterface
         $result = $this->resultJsonFactory->create();
         return $result->setData([
             'success' => true,
-            'price' => $this->getPostcodePrice($this->request->getParam('postcode'))
+            'price' => $this->getPostcodePrice(
+                $this->request->getParam('postcode'),
+                $this->request->getParam('class_id')
+            )
         ]);
     }
 
-    protected function getPostcodePrice(int $postcode): float|int
+    protected function getPostcodePrice(int $postcode, int $classId): float|int
     {
         $price = 0;
 
         $collection = $this->productClassCollectionFactory->create();
-        $collection->addFieldToFilter('postcode', ['eq' => $postcode])
+        $collection->addFieldToFilter('class_id', ['eq' => $classId])
+            ->addFieldToFilter('postcode', ['eq' => $postcode])
             ->setPageSize(1);
 
         if ($collection->getSize() > 0) {
