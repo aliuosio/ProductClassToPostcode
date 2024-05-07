@@ -17,35 +17,21 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Index extends Action
 {
-    /**
-     * @var PageFactory
-     */
-    protected PageFactory $_resultPageFactory;
 
-    /**
-     * @param Context        $context
-     * @param PageFactory $resultPageFactory
-     */
     public function __construct(
         Context $context,
-        PageFactory $resultPageFactory
+        readonly private PageFactory $resultPageFactory
     )
     {
         parent::__construct($context);
-        $this->_resultPageFactory = $resultPageFactory;
     }
 
-    /**
-     * Grid List page.
-     *
-     * @return Page
-     */
     public function execute(): Page
     {
         /** @var Page $resultPage */
-        $resultPage = $this->_resultPageFactory->create();
+        $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('BIWAC_ProductClassToPostcode::grid_list');
-        $resultPage->getConfig()->getTitle()->prepend(__('Grid List'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Product Class To Postcode Prices'));
 
         return $resultPage;
     }

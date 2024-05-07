@@ -110,7 +110,7 @@
                         <item name="label" xsi:type="string" translate="true">Delete</item>
                         <item name="url" xsi:type="url" path="grid/grid/massdelete"/>
                         <item name="confirm" xsi:type="array">
-                            <item name="title" xsi:type="string" translate="true">Delete</item>
+                            <item name="postcode" xsi:type="string" translate="true">Delete</item>
                             <item name="message" xsi:type="string" translate="true">Do you want to delete selected row
                                 record?
                             </item>
@@ -145,27 +145,35 @@
                 </item>
             </argument>
         </selectionsColumn>
+        <column name="id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="label" xsi:type="string" translate="true">ID</item>
+                </item>
+            </argument>
+        </column>
         <column name="class_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">textRange</item>
-                    <item name="label" xsi:type="string" translate="true">Title</item>
+                    <item name="label" xsi:type="string" translate="true">Class ID</item>
                 </item>
             </argument>
         </column>
         <column name="postcode">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">Content</item>
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="label" xsi:type="string" translate="true">Postcode</item>
                 </item>
             </argument>
         </column>
         <column name="price">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">false</item>
-                    <item name="label" xsi:type="string" translate="true">Content</item>
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="label" xsi:type="string" translate="true">Price</item>
                 </item>
             </argument>
         </column>
