@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul_Grid Menu
+ *
+ * @category    Webkul
+ * @package     Webkul_Grid
+ * @author      Webkul Software Private Limited
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BIWAC_ProductClassToPostcode::postcode"
+             title="Product Class to Postcode"
+             module="BIWAC_ProductClassToPostcode"
+             sortOrder="30"
+             action="postcode/grid/index"
+             parent="Magento_Catalog::catalog"
+             resource="BIWAC_ProductClassToPostcode::postcode"/>
+    </menu>
+</config>

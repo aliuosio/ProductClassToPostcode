@@ -15,6 +15,8 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class ProductClass extends AbstractDb
 {
+    protected $_idFieldName = 'id';
+
     protected function _construct(): void
     {
         $this->_init('assemblyservice_product_class', 'id');
