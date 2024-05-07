@@ -18,7 +18,7 @@ interface ProductClassInterface
     const POSTCODE = 'postcode';
     const PRICE = 'price';
 
-    public function getEntityId(): int;
+    public function getEntityId(): ?int;
 
     public function setEntityId($entityId): ProductClassInterface;
 

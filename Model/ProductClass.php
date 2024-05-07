@@ -29,7 +29,7 @@ class ProductClass extends AbstractModel implements ProductClassInterface
         $this->_init(ResourceProductClass::class);
     }
 
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->getData(self::ENTITY_ID);
     }

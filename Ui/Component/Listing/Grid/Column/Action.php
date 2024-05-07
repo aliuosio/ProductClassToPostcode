@@ -1,4 +1,13 @@
-<?php
+<?php declare(strict_types=1);
+/**
+ * @author     Osiozekhai Aliu
+ * @package    Osio_AssemblyService
+ * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 
 namespace BIWAC\ProductClassToPostcode\Ui\Component\Listing\Grid\Column;
 
@@ -10,14 +19,14 @@ use Magento\Framework\UrlInterface;
 class Action extends Column
 {
     /** Url path */
-    const ROW_EDIT_URL = 'postcode/index/addrow';
+    const ROW_EDIT_URL = 'postcode/grid/addrow';
     /** @var UrlInterface */
-    protected $_urlBuilder;
+    protected UrlInterface $_urlBuilder;
 
     /**
      * @var string
      */
-    private $_editUrl;
+    private string $_editUrl;
 
     /**
      * @param ContextInterface   $context
