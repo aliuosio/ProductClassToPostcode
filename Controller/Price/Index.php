@@ -36,7 +36,7 @@ class Index implements ActionInterface
         ]);
     }
 
-    protected function getPostcodePrice(int $postcode, int $classId): float|int
+    protected function getPostcodePrice(string $postcode, string $classId): mixed
     {
         $price = 0;
 
