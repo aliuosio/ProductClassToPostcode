@@ -13,7 +13,7 @@ namespace BIWAC\ProductClassToPostcode\Api\Data;
 interface ProductClassInterface
 {
 
-    const ENTITY_ID = 'id';
+    const ENTITY_ID = 'entity_id';
     const CLASS_ID = 'class_id';
     const POSTCODE = 'postcode';
     const PRICE = 'price';

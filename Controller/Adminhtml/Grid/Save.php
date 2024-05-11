@@ -34,7 +34,7 @@ class Save extends \Magento\Backend\App\Action
      * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      * @SuppressWarnings(PHPMD.NPathComplexity)
      */
-    public function execute()
+    public function execute(): void
     {
         $data = $this->getRequest()->getPostValue();
         if (!$data) {
@@ -44,8 +44,8 @@ class Save extends \Magento\Backend\App\Action
         try {
             $rowData = $this->ProductClassFactory->create();
             $rowData->setData($data);
-            if (isset($data['id'])) {
-                $rowData->setEntityId($data['id']);
+            if (isset($data['entity_id'])) {
+                $rowData->setEntityId($data['entity_id']);
             }
             $rowData->save();
             $this->messageManager->addSuccess(__('Row data has been successfully saved.'));

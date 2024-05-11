@@ -41,7 +41,7 @@ class AddRow extends Action
 
     public function execute()
     {
-        $rowId = (int) $this->getRequest()->getParam('id');
+        $rowId = (int) $this->getRequest()->getParam('entity_id');
         /** @var ProductClass $rowData */
         $rowData = $this->ProductClassFactory->create();
         /** @var Page $resultPage */

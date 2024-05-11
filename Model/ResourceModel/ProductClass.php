@@ -15,7 +15,7 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class ProductClass extends AbstractDb
 {
-    protected $_idFieldName = 'id';
+    protected $_idFieldName = 'entity_id';
 
     protected function _construct(): void
     {

@@ -41,7 +41,7 @@ class AddRow extends Container
      */
     protected function _construct()
     {
-        $this->_objectId = 'row_id';
+        $this->_objectId = 'entity_id';
         $this->_blockGroup = 'BIWAC_ProductClassToPostcode';
         $this->_controller = 'adminhtml_grid';
         parent::_construct();
