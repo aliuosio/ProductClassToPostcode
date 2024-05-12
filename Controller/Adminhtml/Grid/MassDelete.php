@@ -54,6 +54,7 @@ class MassDelete extends Action
         $collection = $this->_filter->getCollection($this->_collectionFactory->create());
         $recordDeleted = 0;
         foreach ($collection->getItems() as $record) {
+            $record->setEntityId($record->getEntityId());
             $record->setId($record->getEntityId());
             $record->delete();
             $recordDeleted++;

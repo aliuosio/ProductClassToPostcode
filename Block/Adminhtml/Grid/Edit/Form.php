@@ -10,44 +10,31 @@
 
 namespace BIWAC\ProductClassToPostcode\Block\Adminhtml\Grid\Edit;
 
+use Magento\Backend\Block\Template\Context;
 use Magento\Backend\Block\Widget\Form\Generic;
+use Magento\Framework\Data\FormFactory;
+use Magento\Framework\Registry;
+use Magento\Store\Model\System\Store;
 
 /**
  * Adminhtml Add New Row Form.
  */
 class Form extends Generic
 {
-    /**
-     * @var \Magento\Store\Model\System\Store
-     */
-    protected $_systemStore;
 
-    /**
-     * @param \Magento\Backend\Block\Template\Context $context,
-     * @param \Magento\Framework\Registry $registry,
-     * @param \Magento\Framework\Data\FormFactory $formFactory,
-     * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-     * @param \Webkul\Grid\Model\Status $options,
-     */
+    protected Store $_systemStore;
+
     public function __construct(
-        \Magento\Backend\Block\Template\Context $context,
-        \Magento\Framework\Registry $registry,
-        \Magento\Framework\Data\FormFactory $formFactory,
-        \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-        \Webkul\Grid\Model\Status $options,
+        Context $context,
+        Registry $registry,
+        FormFactory $formFactory,
         array $data = []
     ) {
-        $this->_options = $options;
-        $this->_wysiwygConfig = $wysiwygConfig;
+
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
-    /**
-     * Prepare form.
-     *
-     * @return $this
-     */
-    protected function _prepareForm()
+    protected function _prepareForm(): Form
     {
         $model = $this->_coreRegistry->registry('row_data');
         $form = $this->_formFactory->create(

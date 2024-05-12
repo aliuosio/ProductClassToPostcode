@@ -12,24 +12,25 @@ namespace BIWAC\ProductClassToPostcode\Block\Adminhtml\Grid;
 
 use Magento\Backend\Block\Widget\Context;
 use Magento\Backend\Block\Widget\Form\Container;
+use Magento\Framework\Registry;
 
 class AddRow extends Container
 {
     /**
      * Core registry.
      *
-     * @var \Magento\Framework\Registry
+     * @var Registry
      */
     protected $_coreRegistry = null;
 
     /**
      * @param Context $context
-     * @param \Magento\Framework\Registry $registry
+     * @param Registry $registry
      * @param array $data
      */
     public function __construct(
         Context                     $context,
-        \Magento\Framework\Registry $registry,
+        Registry $registry,
         array                       $data = []
     )
     {
