@@ -41,10 +41,10 @@ class AddRow extends Action
                 return;
             }
         }
-
+// "Product Class: {$rowData->getClassId()} Postcode: {$rowData->getPostcode()}"
         $this->coreRegistry->register('row_data', $rowData);
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-        $title = $rowId ? __("Product Class: {$rowData->getClassId()} Postcode: {$rowData->getPostcode()}") : __('Add Row Data');
+        $title = $rowId ? sprintf((string)__("Product Class: %d Postcode: %d"), $rowData->getClassId(), $rowData->getPostcode()) : ('Add Row Data');
         $resultPage->getConfig()->getTitle()->prepend($title);
         return $resultPage;
     }

@@ -69,7 +69,7 @@ class Form extends Generic
                 'label' => __('Class ID'),
                 'id' => 'class_id',
                 'title' => __('Class ID'),
-                'class' => 'required-entry',
+                'class' => 'required-entry validate-number',
                 'required' => true,
             ]
         );
@@ -79,6 +79,7 @@ class Form extends Generic
             [
                 'name' => 'postcode',
                 'label' => __('Postcode'),
+                'class' => 'required-entry validate-number',
                 'required' => true,
             ]
         );
@@ -89,6 +90,7 @@ class Form extends Generic
                 'name' => 'price',
                 'label' => __('Price'),
                 'required' => true,
+                'class' => 'required-entry validate-decimal',
             ]
         );
         $form->setValues($model->getData());
