@@ -92,33 +92,6 @@
                 </item>
             </argument>
         </filters>
-        <massaction name="listing_massaction">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">
-                        postcodes_record_grid_list.postcodes_record_grid_list.grid_records_columns.ids
-                    </item>
-                    <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
-                    <item name="indexField" xsi:type="string">entity_id</item>
-                </item>
-            </argument>
-            <!-- Mass actions which you want to add in your grid-->
-            <action name="delete">
-                <argument name="data" xsi:type="array">
-                    <item name="config" xsi:type="array">
-                        <item name="type" xsi:type="string">delete</item>
-                        <item name="label" xsi:type="string" translate="true">Delete</item>
-                        <item name="url" xsi:type="url" path="postcode/grid/massdelete"/>
-                        <item name="confirm" xsi:type="array">
-                            <item name="postcode" xsi:type="string" translate="true">Delete</item>
-                            <item name="message" xsi:type="string" translate="true">Do you want to delete selected row
-                                record?
-                            </item>
-                        </item>
-                    </item>
-                </argument>
-            </action>
-        </massaction>
         <paging name="listing_paging">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -136,15 +109,6 @@
         </paging>
     </container>
     <columns name="grid_records_columns">
-        <selectionsColumn name="ids">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="indexField" xsi:type="string">entity_id</item>
-                    <item name="sorting" xsi:type="string">desc</item>
-                    <item name="sortOrder" xsi:type="number">0</item>
-                </item>
-            </argument>
-        </selectionsColumn>
         <column name="entity_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
