@@ -10,12 +10,14 @@
 
 namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml\Grid;
 
+use Magento\Backend\App\Action;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Ui\Component\MassAction\Filter;
 use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory;
 
-class MassDelete extends \Magento\Backend\App\Action
+class MassDelete extends Action
 {
     /**
      * Massactions filter
@@ -45,7 +47,7 @@ class MassDelete extends \Magento\Backend\App\Action
     }
 
     /**
-     * @return \Magento\Backend\Model\View\Result\Redirect
+     * @throws LocalizedException
      */
     public function execute()
     {
@@ -61,12 +63,9 @@ class MassDelete extends \Magento\Backend\App\Action
         return $this->resultFactory->create(ResultFactory::TYPE_REDIRECT)->setPath('*/*/index');
     }
 
-    /**
-     * Check Category Map recode delete Permission.
-     * @return bool
-     */
-    protected function _isAllowed()
+    protected function _isAllowed(): bool
     {
-        return $this->_authorization->isAllowed('BIWAC_ProductClassToPostcode::row_data_delete');
+        return true;
     }
+
 }

@@ -11,29 +11,20 @@
 namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml\Grid;
 
 
-class Save extends \Magento\Backend\App\Action
-{
-    /**
-     * @var \BIWAC\ProductClassToPostcode\Model\ProductClassFactory
-     */
-    var $ProductClassFactory;
+use BIWAC\ProductClassToPostcode\Model\ProductClassFactory;
+use Magento\Backend\App\Action;
+use Magento\Backend\App\Action\Context;
 
-    /**
-     * @param \Magento\Backend\App\Action\Context $context
-     * @param \BIWAC\ProductClassToPostcode\Model\ProductClassFactory $ProductClassFactory
-     */
+class Save extends Action
+{
+
     public function __construct(
-        \Magento\Backend\App\Action\Context $context,
-        \BIWAC\ProductClassToPostcode\Model\ProductClassFactory $ProductClassFactory
+        Context $context,
+        private readonly ProductClassFactory $ProductClassFactory
     ) {
         parent::__construct($context);
-        $this->ProductClassFactory = $ProductClassFactory;
     }
 
-    /**
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
-     * @SuppressWarnings(PHPMD.NPathComplexity)
-     */
     public function execute(): void
     {
         $data = $this->getRequest()->getPostValue();

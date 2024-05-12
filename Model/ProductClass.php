@@ -29,32 +29,32 @@ class ProductClass extends AbstractModel implements ProductClassInterface
         $this->_init(ResourceProductClass::class);
     }
 
-    public function getEntityId(): ?int
+    public function getEntityId(): int
     {
-        return $this->getData(self::ENTITY_ID);
+        return (int)$this->getData(self::ENTITY_ID);
     }
 
-    public function setEntityId($entityId): ProductClass
+    public function setEntityId($entityId): ProductClassInterface
     {
         return $this->setData(self::ENTITY_ID, $entityId);
     }
 
     public function getClassId(): int
     {
-        return $this->getData(self::CLASS_ID);
+        return (int)$this->getData(self::CLASS_ID);
     }
 
-    public function setClassId(int $classId): ProductClass
+    public function setClassId(int $classId): ProductClassInterface
     {
         return $this->setData(self::CLASS_ID, $classId);
     }
 
     public function getPostcode(): int
     {
-        return $this->getData(self::POSTCODE);
+        return (int)$this->getData(self::POSTCODE);
     }
 
-    public function setPostcode(int $postcode): ProductClass
+    public function setPostcode(int $postcode): ProductClassInterface
     {
         return $this->setData(self::POSTCODE, $postcode);
     }
@@ -64,7 +64,7 @@ class ProductClass extends AbstractModel implements ProductClassInterface
         return $this->getData(self::PRICE);
     }
 
-    public function setPrice(float $price): ProductClass
+    public function setPrice(float $price): ProductClassInterface
     {
         return $this->setData(self::PRICE, $price);
     }
