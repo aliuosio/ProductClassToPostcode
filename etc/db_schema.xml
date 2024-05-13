@@ -11,11 +11,11 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="assemblyservice_product_class" resource="default" engine="innodb">
-        <column xsi:type="smallint" name="entity_id" padding="6" unsigned="true" nullable="false" identity="true"
+        <column xsi:type="int" name="entity_id" padding="6" unsigned="true" nullable="false" identity="true"
                 comment="ID"/>
-        <column xsi:type="smallint" name="class_id" padding="6" unsigned="true" nullable="false"
+        <column xsi:type="int" name="class_id" padding="6" unsigned="true" nullable="false"
                 comment="Class ID"/>
-        <column xsi:type="smallint" name="postcode" padding="6" unsigned="true" nullable="false" comment="Postcode"/>
+        <column xsi:type="int" name="postcode" padding="6" unsigned="true" nullable="false" comment="Postcode"/>
         <column xsi:type="decimal" name="price" scale="4" precision="12" nullable="false" comment="Price"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="entity_id"/>
