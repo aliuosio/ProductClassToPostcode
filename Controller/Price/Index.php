@@ -15,6 +15,7 @@ use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Controller\Result\Json;
 use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Framework\Exception\LocalizedException;
 
 class Index implements ActionInterface
 {
@@ -27,11 +28,14 @@ class Index implements ActionInterface
     }
 
 
+    /**
+     * @throws LocalizedException
+     */
     public function execute(): Json
     {
         $result = $this->resultJsonFactory->create();
         $productClass = $this->productClassFactory->create();
-        
+
         $price = $productClass->getPostcodePrice(
             $this->request->getParam('postcode'),
             $this->request->getParam('class_id')

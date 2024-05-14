@@ -88,7 +88,7 @@ class ProductClass extends AbstractModel implements ProductClassInterface
     /**
      * @throws LocalizedException
      */
-    public function getPostcodePrice(string $postcode, string $classId): string
+    public function getPostcodePrice(?int $postcode, ?int $classId): string
     {
         return $this->resourceProductClass->fetchPostcodePrice($postcode, $classId);
     }
