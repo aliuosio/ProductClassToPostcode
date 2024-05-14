@@ -26,7 +26,7 @@ class ProductClass extends AbstractDb
     /**
      * @throws LocalizedException
      */
-    public function fetchPostcodePrice(?int $postcode, ?int $classId): string
+    public function fetchPostcodePrice(?string $postcode, ?string $classId): string
     {
         $connection = $this->getConnection();
         $select = $connection->select()
