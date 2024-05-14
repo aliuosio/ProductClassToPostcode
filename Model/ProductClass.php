@@ -13,7 +13,12 @@ namespace BIWAC\ProductClassToPostcode\Model;
 
 use BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface;
 use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass as ResourceProductClass;
+use Magento\Framework\Data\Collection\AbstractDb;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\Model\Context;
+use Magento\Framework\Model\ResourceModel\AbstractResource;
+use Magento\Framework\Registry;
 
 class ProductClass extends AbstractModel implements ProductClassInterface
 {
@@ -23,6 +28,17 @@ class ProductClass extends AbstractModel implements ProductClassInterface
     protected $_cacheTag = 'assemblyservice_product_class';
 
     protected $_eventPrefix = 'assemblyservice_product_class';
+
+    public function __construct(
+        readonly private ResourceProductClass $resourceProductClass,
+        Context                               $context, Registry $registry,
+        AbstractResource                      $resource = null,
+        AbstractDb                            $resourceCollection = null,
+        array                                 $data = []
+    )
+    {
+        parent::__construct($context, $registry, $resource, $resourceCollection, $data);
+    }
 
     protected function _construct(): void
     {
@@ -68,4 +84,13 @@ class ProductClass extends AbstractModel implements ProductClassInterface
     {
         return $this->setData(self::PRICE, $price);
     }
+
+    /**
+     * @throws LocalizedException
+     */
+    public function getPostcodePrice(string $postcode, string $classId): string
+    {
+        return $this->resourceProductClass->fetchPostcodePrice($postcode, $classId);
+    }
+
 }

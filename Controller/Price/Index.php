@@ -10,7 +10,7 @@
 
 namespace BIWAC\ProductClassToPostcode\Controller\Price;
 
-use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as ProductClassCollectionFactory;
+use BIWAC\ProductClassToPostcode\Model\ProductClassFactory;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Controller\Result\Json;
@@ -19,36 +19,27 @@ use Magento\Framework\Controller\Result\JsonFactory;
 class Index implements ActionInterface
 {
     public function __construct(
-        readonly private JsonFactory $resultJsonFactory,
-        readonly private ProductClassCollectionFactory $productClassCollectionFactory,
-        readonly private Http $request
-    ) {}
+        readonly private JsonFactory         $resultJsonFactory,
+        readonly private ProductClassFactory $productClassFactory,
+        readonly private Http                $request
+    )
+    {
+    }
+
 
     public function execute(): Json
     {
         $result = $this->resultJsonFactory->create();
+        $productClass = $this->productClassFactory->create();
+        
+        $price = $productClass->getPostcodePrice(
+            $this->request->getParam('postcode'),
+            $this->request->getParam('class_id')
+        );
+
         return $result->setData([
             'success' => true,
-            'price' => $this->getPostcodePrice(
-                $this->request->getParam('postcode'),
-                $this->request->getParam('class_id')
-            )
+            'price' => $price
         ]);
-    }
-
-    protected function getPostcodePrice(?string $postcode, ?string $classId): mixed
-    {
-        $price = 0;
-
-        $collection = $this->productClassCollectionFactory->create();
-        $collection->addFieldToFilter('class_id', ['eq' => $classId])
-            ->addFieldToFilter('postcode', ['eq' => $postcode])
-            ->setPageSize(1);
-
-        if ($collection->getSize() > 0) {
-            $price = $collection->getFirstItem()->getPrice();
-        }
-
-        return $price;
     }
 }
