@@ -23,9 +23,7 @@ class Index implements ActionInterface
         readonly private JsonFactory         $resultJsonFactory,
         readonly private ProductClassFactory $productClassFactory,
         readonly private Http                $request
-    )
-    {
-    }
+    ) {}
 
 
     /**
