@@ -33,4 +33,6 @@ interface ProductClassInterface
     public function getPrice(): float;
 
     public function setPrice(float $price): ProductClassInterface;
+
+    public function getPostcodePrice(?string $postcode, ?string $classId): string|bool;
 }
