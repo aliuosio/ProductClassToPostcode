@@ -20,5 +20,11 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="entity_id"/>
         </constraint>
+        <index referenceId="BIWAC_PRODUCT_CLASS_ID_IDX" indexType="btree">
+            <column name="class_id"/>
+        </index>
+        <index referenceId="BIWAC_PRODUCT_POSTCODE_IDX" indexType="btree">
+            <column name="postcode"/>
+        </index>
     </table>
 </schema>
