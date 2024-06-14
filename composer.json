@@ -1,7 +1,8 @@
 {
-    "name": "biwac/module-productclasstopostcode",
+    "name": "biwac/magento-product-class-to-postcode",
     "description": "Product Class To Postcode",
     "type": "magento2-module",
+    "version": "dev-main",
     "license": "MIT",
     "authors": [
         {
