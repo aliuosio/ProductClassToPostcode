@@ -1,13 +1,9 @@
-<?php declare(strict_types=1);
+<?php
 /**
- * @author     Osiozekhai Aliu
- * @package    BIWAC_ProductClassToPostcode
- * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * See COPYING.txt for license details.
  */
-
+declare(strict_types=1);
 
 namespace BIWAC\ProductClassToPostcode\Model\ResourceModel;
 
@@ -16,11 +12,13 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class ProductClass extends AbstractDb
 {
-    protected $_idFieldName = 'entity_id';
 
-    protected function _construct(): void
+    /**
+     * @inheritDoc
+     */
+    protected function _construct()
     {
-        $this->_init('assemblyservice_product_class', 'entity_id');
+        $this->_init('biwac_productclasstopostcode_productclass', 'entity_id');
     }
 
     /**

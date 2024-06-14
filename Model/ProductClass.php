@@ -1,13 +1,9 @@
-<?php declare(strict_types=1);
+<?php
 /**
- * @author     Osiozekhai Aliu
- * @package    BIWAC_ProductClassToPostcode
- * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * See COPYING.txt for license details.
  */
-
+declare(strict_types=1);
 
 namespace BIWAC\ProductClassToPostcode\Model;
 
@@ -23,12 +19,6 @@ use Magento\Framework\Registry;
 class ProductClass extends AbstractModel implements ProductClassInterface
 {
 
-    const CACHE_TAG = 'assemblyservice_product_class';
-
-    protected $_cacheTag = 'assemblyservice_product_class';
-
-    protected $_eventPrefix = 'assemblyservice_product_class';
-
     public function __construct(
         readonly private ResourceProductClass $resourceProductClass,
         Context                               $context, Registry $registry,
@@ -39,48 +29,90 @@ class ProductClass extends AbstractModel implements ProductClassInterface
     {
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }
-
-    protected function _construct(): void
+    /**
+     * @inheritDoc
+     */
+    public function _construct()
     {
-        $this->_init(ResourceProductClass::class);
+        $this->_init(\BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass::class);
     }
 
-    public function getEntityId(): int
+    /**
+     * @inheritDoc
+     */
+    public function getProductclassId()
     {
-        return (int)$this->getData(self::ENTITY_ID);
+        return $this->getData(self::entity_id);
     }
 
-    public function setEntityId($entityId): ProductClassInterface
+    /**
+     * @inheritDoc
+     */
+    public function setProductclassId($productclassId)
+    {
+        return $this->setData(self::entity_id, $productclassId);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getEntityId()
+    {
+        return $this->getData(self::ENTITY_ID);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setEntityId($entityId)
     {
         return $this->setData(self::ENTITY_ID, $entityId);
     }
 
-    public function getClassId(): int
+    /**
+     * @inheritDoc
+     */
+    public function getClassId()
     {
-        return (int)$this->getData(self::CLASS_ID);
+        return $this->getData(self::CLASS_ID);
     }
 
-    public function setClassId(int $classId): ProductClassInterface
+    /**
+     * @inheritDoc
+     */
+    public function setClassId($classId)
     {
         return $this->setData(self::CLASS_ID, $classId);
     }
 
-    public function getPostcode(): int
+    /**
+     * @inheritDoc
+     */
+    public function getPostcode()
     {
-        return (int)$this->getData(self::POSTCODE);
+        return $this->getData(self::POSTCODE);
     }
 
-    public function setPostcode(int $postcode): ProductClassInterface
+    /**
+     * @inheritDoc
+     */
+    public function setPostcode($postcode)
     {
         return $this->setData(self::POSTCODE, $postcode);
     }
 
-    public function getPrice(): float
+    /**
+     * @inheritDoc
+     */
+    public function getPrice()
     {
         return $this->getData(self::PRICE);
     }
 
-    public function setPrice(float $price): ProductClassInterface
+    /**
+     * @inheritDoc
+     */
+    public function setPrice($price)
     {
         return $this->setData(self::PRICE, $price);
     }
@@ -92,5 +124,5 @@ class ProductClass extends AbstractModel implements ProductClassInterface
     {
         return $this->resourceProductClass->fetchPostcodePrice($postcode, $classId);
     }
-
 }
+

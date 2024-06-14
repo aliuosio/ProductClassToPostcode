@@ -1,18 +1,14 @@
-<?php declare(strict_types=1);
+<?php
 /**
- * @author     Osiozekhai Aliu
- * @package    BIWAC_ProductClassToPostcode
- * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * See COPYING.txt for license details.
  */
+declare(strict_types=1);
 
+namespace BIWAC\ProductClassToPostcode\Model\Product\Attribute\Source;
 
-namespace BIWAC\ProductClassToPostcode\Model\AttributeValues\Source;
-
-use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as OptionCollectionFactory;
+use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
 class ProductClass extends AbstractSource
 {
@@ -35,3 +31,4 @@ class ProductClass extends AbstractSource
         return $options;
     }
 }
+

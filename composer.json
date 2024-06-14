@@ -1,18 +1,16 @@
 {
-    "name": "biwac/magento-product-class-to-postcode",
+    "name": "biwac/module-productclasstopostcode",
     "description": "Product Class To Postcode",
     "type": "magento2-module",
-    "license": "proprietary",
-    "version": "dev-main",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Osiozekhai Aliu"
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
         }
     ],
-    "require": {
-        "php": "^8.1.0",
-        "ext-pdo": "*"
-    },
+    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "files": [
             "registration.php"

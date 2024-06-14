@@ -1,12 +1,9 @@
-<?php declare(strict_types=1);
+<?php
 /**
- * @author     Osiozekhai Aliu
- * @package    Osio_AssemblyService
- * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * See COPYING.txt for license details.
  */
+declare(strict_types=1);
 
 namespace BIWAC\ProductClassToPostcode\Api\Data;
 
@@ -14,25 +11,74 @@ interface ProductClassInterface
 {
 
     const ENTITY_ID = 'entity_id';
+    const PRICE = 'price';
+    const entity_id = 'entity_id';
     const CLASS_ID = 'class_id';
     const POSTCODE = 'postcode';
-    const PRICE = 'price';
 
-    public function getEntityId(): int;
+    /**
+     * Get entity_id
+     * @return string|null
+     */
+    public function getProductclassId();
 
-    public function setEntityId($entityId): ProductClassInterface;
+    /**
+     * Set entity_id
+     * @param string $productclassId
+     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     */
+    public function setProductclassId($productclassId);
 
-    public function getClassId(): int;
+    /**
+     * Get entity_id
+     * @return string|null
+     */
+    public function getEntityId();
 
-    public function setClassId(int $classId): ProductClassInterface;
+    /**
+     * Set entity_id
+     * @param string $entityId
+     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     */
+    public function setEntityId($entityId);
 
-    public function getPostcode(): int;
+    /**
+     * Get class_id
+     * @return string|null
+     */
+    public function getClassId();
 
-    public function setPostcode(int $postcode): ProductClassInterface;
+    /**
+     * Set class_id
+     * @param string $classId
+     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     */
+    public function setClassId($classId);
 
-    public function getPrice(): float;
+    /**
+     * Get postcode
+     * @return string|null
+     */
+    public function getPostcode();
 
-    public function setPrice(float $price): ProductClassInterface;
+    /**
+     * Set postcode
+     * @param string $postcode
+     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     */
+    public function setPostcode($postcode);
 
-    public function getPostcodePrice(?string $postcode, ?string $classId): string|bool;
+    /**
+     * Get price
+     * @return string|null
+     */
+    public function getPrice();
+
+    /**
+     * Set price
+     * @param string $price
+     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     */
+    public function setPrice($price);
 }
+

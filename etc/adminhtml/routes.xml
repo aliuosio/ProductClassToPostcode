@@ -1,18 +1,8 @@
-<?xml version="1.0"?>
-<!--
-/**
- * Webkul_Grid route xml
- *
- * @category    Webkul
- * @package     Webkul_Grid
- * @author      Webkul Software Private Limited
- *
- */
--->
+<?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
-    <router id="admin">
-        <route id="postcode" frontName="postcode">
-            <module name="BIWAC_ProductClassToPostcode" />
-        </route>
-    </router>
+	<router id="admin">
+		<route frontName="biwac_productclasstopostcode" id="biwac_productclasstopostcode">
+			<module before="Magento_Backend" name="BIWAC_ProductClassToPostcode"/>
+		</route>
+	</router>
 </config>
