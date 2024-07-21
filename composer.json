@@ -1,5 +1,5 @@
 {
-    "name": "osio/magento-product-class-to-postcode",
+    "name": "aliuosio/magento-product-class-to-postcode",
     "description": "Product Class To Postcode",
     "type": "magento2-module",
     "version": "dev-main",
