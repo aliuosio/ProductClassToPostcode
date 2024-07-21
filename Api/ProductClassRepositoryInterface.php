@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Api;
+namespace Osio\ProductClassToPostcode\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -14,18 +14,18 @@ interface ProductClassRepositoryInterface
 
     /**
      * Save ProductClass
-     * @param \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
-     * @return \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface
+     * @param \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
+     * @return \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
+        \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
     );
 
     /**
      * Retrieve ProductClass
      * @param string $productclassId
-     * @return \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($productclassId);
@@ -33,7 +33,7 @@ interface ProductClassRepositoryInterface
     /**
      * Retrieve ProductClass matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \BIWAC\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterface
+     * @return \Osio\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -42,12 +42,12 @@ interface ProductClassRepositoryInterface
 
     /**
      * Delete ProductClass
-     * @param \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
+     * @param \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
+        \Osio\ProductClassToPostcode\Api\Data\ProductClassInterface $productClass
     );
 
     /**

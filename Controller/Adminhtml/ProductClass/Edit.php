@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
+namespace Osio\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
 
-class Edit extends \BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductClass
+class Edit extends \Osio\ProductClassToPostcode\Controller\Adminhtml\ProductClass
 {
 
     protected $resultPageFactory;
@@ -35,7 +35,7 @@ class Edit extends \BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductCla
     {
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('entity_id');
-        $model = $this->_objectManager->create(\BIWAC\ProductClassToPostcode\Model\ProductClass::class);
+        $model = $this->_objectManager->create(\Osio\ProductClassToPostcode\Model\ProductClass::class);
 
         // 2. Initial checking
         if ($id) {
@@ -47,7 +47,7 @@ class Edit extends \BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductCla
                 return $resultRedirect->setPath('*/*/');
             }
         }
-        $this->_coreRegistry->register('biwac_productclasstopostcode_productclass', $model);
+        $this->_coreRegistry->register('osio_productclasstopostcode_productclass', $model);
 
         // 3. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */

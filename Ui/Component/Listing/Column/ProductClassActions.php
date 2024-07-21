@@ -1,19 +1,19 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Ui\Component\Listing\Column;
+namespace Osio\ProductClassToPostcode\Ui\Component\Listing\Column;
 
 class ProductClassActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
 
-    const URL_PATH_DELETE = 'biwac_productclasstopostcode/productclass/delete';
-    const URL_PATH_DETAILS = 'biwac_productclasstopostcode/productclass/details';
+    const URL_PATH_DELETE = 'osio_productclasstopostcode/productclass/delete';
+    const URL_PATH_DETAILS = 'osio_productclasstopostcode/productclass/details';
     protected $urlBuilder;
-    const URL_PATH_EDIT = 'biwac_productclasstopostcode/productclass/edit';
+    const URL_PATH_EDIT = 'osio_productclasstopostcode/productclass/edit';
 
     /**
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context

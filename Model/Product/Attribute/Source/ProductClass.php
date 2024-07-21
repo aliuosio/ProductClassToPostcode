@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Model\Product\Attribute\Source;
+namespace Osio\ProductClassToPostcode\Model\Product\Attribute\Source;
 
-use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as OptionCollectionFactory;
+use Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as OptionCollectionFactory;
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
 class ProductClass extends AbstractSource

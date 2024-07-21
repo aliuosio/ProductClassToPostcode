@@ -1,16 +1,16 @@
 <?php declare(strict_types=1);
 /**
  * @author     Osiozekhai Aliu
- * @package    BIWAC_ProductClassToPostcode
+ * @package    Osio_ProductClassToPostcode
  * @copyright  Copyright (c) 2024 Osiozekhai Aliu (https://github.com/aliuosio)
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BIWAC\ProductClassToPostcode\Controller\Price;
+namespace Osio\ProductClassToPostcode\Controller\Price;
 
-use BIWAC\ProductClassToPostcode\Model\ProductClassFactory;
+use Osio\ProductClassToPostcode\Model\ProductClassFactory;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\Controller\Result\Json;

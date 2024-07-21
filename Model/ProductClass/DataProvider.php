@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Model\ProductClass;
+namespace Osio\ProductClassToPostcode\Model\ProductClass;
 
-use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory;
+use Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
@@ -64,15 +64,15 @@ class DataProvider extends AbstractDataProvider
         foreach ($items as $model) {
             $this->loadedData[$model->getId()] = $model->getData();
         }
-        $data = $this->dataPersistor->get('biwac_productclasstopostcode_productclass');
-        
+        $data = $this->dataPersistor->get('osio_productclasstopostcode_productclass');
+
         if (!empty($data)) {
             $model = $this->collection->getNewEmptyItem();
             $model->setData($data);
             $this->loadedData[$model->getId()] = $model->getData();
-            $this->dataPersistor->clear('biwac_productclasstopostcode_productclass');
+            $this->dataPersistor->clear('osio_productclasstopostcode_productclass');
         }
-        
+
         return $this->loadedData;
     }
 }

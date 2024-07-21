@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Api\Data;
+namespace Osio\ProductClassToPostcode\Api\Data;
 
 interface ProductClassInterface
 {
@@ -25,7 +25,7 @@ interface ProductClassInterface
     /**
      * Set entity_id
      * @param string $productclassId
-     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
      */
     public function setProductclassId($productclassId);
 
@@ -38,7 +38,7 @@ interface ProductClassInterface
     /**
      * Set entity_id
      * @param string $entityId
-     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
      */
     public function setEntityId($entityId);
 
@@ -51,7 +51,7 @@ interface ProductClassInterface
     /**
      * Set class_id
      * @param string $classId
-     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
      */
     public function setClassId($classId);
 
@@ -64,7 +64,7 @@ interface ProductClassInterface
     /**
      * Set postcode
      * @param string $postcode
-     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
      */
     public function setPostcode($postcode);
 
@@ -77,7 +77,7 @@ interface ProductClassInterface
     /**
      * Set price
      * @param string $price
-     * @return \BIWAC\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
+     * @return \Osio\ProductClassToPostcode\ProductClass\Api\Data\ProductClassInterface
      */
     public function setPrice($price);
 }

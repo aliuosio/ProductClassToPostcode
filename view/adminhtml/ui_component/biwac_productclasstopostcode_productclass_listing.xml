@@ -2,13 +2,13 @@
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
 	<argument name="data" xsi:type="array">
 		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">biwac_productclasstopostcode_productclass_listing.biwac_productclasstopostcode_productclass_listing_data_source</item>
+			<item name="provider" xsi:type="string">osio_productclasstopostcode_productclass_listing.osio_productclasstopostcode_productclass_listing_data_source</item>
 		</item>
 	</argument>
 	<settings>
-		<spinner>biwac_productclasstopostcode_productclass_columns</spinner>
+		<spinner>osio_productclasstopostcode_productclass_columns</spinner>
 		<deps>
-			<dep>biwac_productclasstopostcode_productclass_listing.biwac_productclasstopostcode_productclass_listing_data_source</dep>
+			<dep>osio_productclasstopostcode_productclass_listing.osio_productclasstopostcode_productclass_listing_data_source</dep>
 		</deps>
 		<buttons>
 			<button name="add">
@@ -18,15 +18,15 @@
 			</button>
 		</buttons>
 	</settings>
-	<dataSource name="biwac_productclasstopostcode_productclass_listing_data_source" component="Magento_Ui/js/grid/provider">
+	<dataSource name="osio_productclasstopostcode_productclass_listing_data_source" component="Magento_Ui/js/grid/provider">
 		<settings>
 			<storageConfig>
 				<param name="indexField" xsi:type="string">entity_id</param>
 			</storageConfig>
 			<updateUrl path="mui/index/render"/>
 		</settings>
-		<aclResource>BIWAC_ProductClassToPostcode::ProductClass</aclResource>
-		<dataProvider name="biwac_productclasstopostcode_productclass_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+		<aclResource>Osio_ProductClassToPostcode::ProductClass</aclResource>
+		<dataProvider name="osio_productclasstopostcode_productclass_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
 			<settings>
 				<requestFieldName>id</requestFieldName>
 				<primaryFieldName>entity_id</primaryFieldName>
@@ -42,7 +42,7 @@
 		<filters name="listing_filters"/>
 		<paging name="listing_paging"/>
 	</listingToolbar>
-	<columns name="biwac_productclasstopostcode_productclass_columns">
+	<columns name="osio_productclasstopostcode_productclass_columns">
 		<selectionsColumn name="ids">
 			<settings>
 				<indexField>entity_id</indexField>
@@ -73,7 +73,7 @@
 				</editor>
 			</settings>
 		</column>
-		<actionsColumn name="actions" class="BIWAC\ProductClassToPostcode\Ui\Component\Listing\Column\ProductClassActions">
+		<actionsColumn name="actions" class="Osio\ProductClassToPostcode\Ui\Component\Listing\Column\ProductClassActions">
 			<settings>
 				<indexField>entity_id</indexField>
 				<resizeEnabled>false</resizeEnabled>

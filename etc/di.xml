@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-	<preference for="BIWAC\ProductClassToPostcode\Api\ProductClassRepositoryInterface" type="BIWAC\ProductClassToPostcode\Model\ProductClassRepository"/>
-	<preference for="BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface" type="BIWAC\ProductClassToPostcode\Model\ProductClass"/>
-	<preference for="BIWAC\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
-	<virtualType name="BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+	<preference for="Osio\ProductClassToPostcode\Api\ProductClassRepositoryInterface" type="Osio\ProductClassToPostcode\Model\ProductClassRepository"/>
+	<preference for="Osio\ProductClassToPostcode\Api\Data\ProductClassInterface" type="Osio\ProductClassToPostcode\Model\ProductClass"/>
+	<preference for="Osio\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
 		<arguments>
-			<argument name="mainTable" xsi:type="string">biwac_productclasstopostcode_productclass</argument>
-			<argument name="resourceModel" xsi:type="string">BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\Collection</argument>
+			<argument name="mainTable" xsi:type="string">osio_productclasstopostcode_productclass</argument>
+			<argument name="resourceModel" xsi:type="string">Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\Collection</argument>
 		</arguments>
 	</virtualType>
 	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
 		<arguments>
 			<argument name="collections" xsi:type="array">
-				<item name="biwac_productclasstopostcode_productclass_listing_data_source" xsi:type="string">BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\Grid\Collection</item>
+				<item name="osio_productclasstopostcode_productclass_listing_data_source" xsi:type="string">Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\Grid\Collection</item>
 			</argument>
 		</arguments>
 	</type>

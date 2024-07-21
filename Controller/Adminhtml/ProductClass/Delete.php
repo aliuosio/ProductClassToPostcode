@@ -1,13 +1,13 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
+namespace Osio\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
 
-class Delete extends \BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductClass
+class Delete extends \Osio\ProductClassToPostcode\Controller\Adminhtml\ProductClass
 {
 
     /**
@@ -24,7 +24,7 @@ class Delete extends \BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductC
         if ($id) {
             try {
                 // init model and delete
-                $model = $this->_objectManager->create(\BIWAC\ProductClassToPostcode\Model\ProductClass::class);
+                $model = $this->_objectManager->create(\Osio\ProductClassToPostcode\Model\ProductClass::class);
                 $model->load($id);
                 $model->delete();
                 // display success message

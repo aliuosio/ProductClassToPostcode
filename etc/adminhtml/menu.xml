@@ -2,9 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="BIWAC_ProductClassToPostcode::biwac_productclasstopostcode_productclass" title="ProductClass"
-             module="BIWAC_ProductClassToPostcode" sortOrder="9999" resource="Magento_Backend::content"
+        <add id="Osio_ProductClassToPostcode::osio_productclasstopostcode_productclass" title="ProductClass"
+             module="Osio_ProductClassToPostcode" sortOrder="9999" resource="Magento_Backend::content"
              parent="Magento_Catalog::catalog"
-             action="biwac_productclasstopostcode/productclass/index"/>
+             action="osio_productclasstopostcode/productclass/index"/>
     </menu>
 </config>

@@ -2,22 +2,22 @@
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
 	<argument name="data" xsi:type="array">
 		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">biwac_productclasstopostcode_productclass_form.productclass_form_data_source</item>
+			<item name="provider" xsi:type="string">osio_productclasstopostcode_productclass_form.productclass_form_data_source</item>
 		</item>
 		<item name="label" xsi:type="string" translate="true">General Information</item>
 		<item name="template" xsi:type="string">templates/form/collapsible</item>
 	</argument>
 	<settings>
 		<buttons>
-			<button name="back" class="BIWAC\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\BackButton"/>
-			<button name="delete" class="BIWAC\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\DeleteButton"/>
-			<button name="save" class="BIWAC\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\SaveButton"/>
-			<button name="save_and_continue" class="BIWAC\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\SaveAndContinueButton"/>
+			<button name="back" class="Osio\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\BackButton"/>
+			<button name="delete" class="Osio\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\DeleteButton"/>
+			<button name="save" class="Osio\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\SaveButton"/>
+			<button name="save_and_continue" class="Osio\ProductClassToPostcode\Block\Adminhtml\ProductClass\Edit\SaveAndContinueButton"/>
 		</buttons>
-		<namespace>biwac_productclasstopostcode_productclass_form</namespace>
+		<namespace>osio_productclasstopostcode_productclass_form</namespace>
 		<dataScope>data</dataScope>
 		<deps>
-			<dep>biwac_productclasstopostcode_productclass_form.productclass_form_data_source</dep>
+			<dep>osio_productclasstopostcode_productclass_form.productclass_form_data_source</dep>
 		</deps>
 	</settings>
 	<dataSource name="productclass_form_data_source">
@@ -29,7 +29,7 @@
 		<settings>
 			<submitUrl path="*/*/save"/>
 		</settings>
-		<dataProvider name="productclass_form_data_source" class="BIWAC\ProductClassToPostcode\Model\ProductClass\DataProvider">
+		<dataProvider name="productclass_form_data_source" class="Osio\ProductClassToPostcode\Model\ProductClass\DataProvider">
 			<settings>
 				<requestFieldName>entity_id</requestFieldName>
 				<primaryFieldName>entity_id</primaryFieldName>

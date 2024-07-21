@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass;
+namespace Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
@@ -23,8 +23,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \BIWAC\ProductClassToPostcode\Model\ProductClass::class,
-            \BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass::class
+            \Osio\ProductClassToPostcode\Model\ProductClass::class,
+            \Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass::class
         );
     }
 }

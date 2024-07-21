@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-	<table name="biwac_productclasstopostcode_productclass" resource="default" engine="innodb" comment="biwac_productclasstopostcode_productclass Table">
+	<table name="osio_productclasstopostcode_productclass" resource="default" engine="innodb" comment="osio_productclasstopostcode_productclass Table">
 		<column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
 		<column name="class_id" nullable="false" xsi:type="int" comment="class_id" identity="false" unsigned="true"/>
         <column name="postcode" nullable="false" xsi:type="int" comment="postcode" identity="false" unsigned="true"/>
@@ -8,10 +8,10 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="entity_id"/>
         </constraint>
-        <index referenceId="BIWAC_PRODUCTCLASSTOPOSTCODE_PRODUCTCLASS_POSTCODE" indexType="btree">
+        <index referenceId="Osio_PRODUCTCLASSTOPOSTCODE_PRODUCTCLASS_POSTCODE" indexType="btree">
             <column name="postcode"/>
         </index>
-        <index referenceId="BIWAC_PRODUCTCLASSTOPOSTCODE_PRODUCTCLASS_CLASS_ID" indexType="btree">
+        <index referenceId="Osio_PRODUCTCLASSTOPOSTCODE_PRODUCTCLASS_CLASS_ID" indexType="btree">
             <column name="class_id"/>
         </index>
     </table>

@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
         <route id="postcodes" frontName="postcodes">
-            <module name="BIWAC_ProductClassToPostcode"/>
+            <module name="Osio_ProductClassToPostcode"/>
         </route>
     </router>
 </config>

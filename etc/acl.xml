@@ -3,11 +3,11 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="BIWAC_ProductClassToPostcode::ProductClass" title="ProductClass" sortOrder="10">
-					<resource id="BIWAC_ProductClassToPostcode::ProductClass_save" title="Save ProductClass" sortOrder="10"/>
-					<resource id="BIWAC_ProductClassToPostcode::ProductClass_delete" title="Delete ProductClass" sortOrder="20"/>
-					<resource id="BIWAC_ProductClassToPostcode::ProductClass_update" title="Update ProductClass" sortOrder="30"/>
-					<resource id="BIWAC_ProductClassToPostcode::ProductClass_view" title="View ProductClass" sortOrder="40"/>
+				<resource id="Osio_ProductClassToPostcode::ProductClass" title="ProductClass" sortOrder="10">
+					<resource id="Osio_ProductClassToPostcode::ProductClass_save" title="Save ProductClass" sortOrder="10"/>
+					<resource id="Osio_ProductClassToPostcode::ProductClass_delete" title="Delete ProductClass" sortOrder="20"/>
+					<resource id="Osio_ProductClassToPostcode::ProductClass_update" title="Update ProductClass" sortOrder="30"/>
+					<resource id="Osio_ProductClassToPostcode::ProductClass_view" title="View ProductClass" sortOrder="40"/>
 				</resource>
 			</resource>
 		</resources>

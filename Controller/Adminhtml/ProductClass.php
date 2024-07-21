@@ -1,17 +1,17 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml;
+namespace Osio\ProductClassToPostcode\Controller\Adminhtml;
 
 abstract class ProductClass extends \Magento\Backend\App\Action
 {
 
     protected $_coreRegistry;
-    const ADMIN_RESOURCE = 'BIWAC_ProductClassToPostcode::top_level';
+    const ADMIN_RESOURCE = 'Osio_ProductClassToPostcode::top_level';
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
@@ -34,7 +34,7 @@ abstract class ProductClass extends \Magento\Backend\App\Action
     public function initPage($resultPage)
     {
         $resultPage->setActiveMenu(self::ADMIN_RESOURCE)
-            ->addBreadcrumb(__('BIWAC'), __('BIWAC'))
+            ->addBreadcrumb(__('Osio'), __('Osio'))
             ->addBreadcrumb(__('Productclass'), __('Productclass'));
         return $resultPage;
     }

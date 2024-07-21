@@ -1,18 +1,18 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Model;
+namespace Osio\ProductClassToPostcode\Model;
 
-use BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterface;
-use BIWAC\ProductClassToPostcode\Api\Data\ProductClassInterfaceFactory;
-use BIWAC\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterfaceFactory;
-use BIWAC\ProductClassToPostcode\Api\ProductClassRepositoryInterface;
-use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass as ResourceProductClass;
-use BIWAC\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as ProductClassCollectionFactory;
+use Osio\ProductClassToPostcode\Api\Data\ProductClassInterface;
+use Osio\ProductClassToPostcode\Api\Data\ProductClassInterfaceFactory;
+use Osio\ProductClassToPostcode\Api\Data\ProductClassSearchResultsInterfaceFactory;
+use Osio\ProductClassToPostcode\Api\ProductClassRepositoryInterface;
+use Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass as ResourceProductClass;
+use Osio\ProductClassToPostcode\Model\ResourceModel\ProductClass\CollectionFactory as ProductClassCollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
@@ -104,17 +104,17 @@ class ProductClassRepository implements ProductClassRepositoryInterface
         \Magento\Framework\Api\SearchCriteriaInterface $criteria
     ) {
         $collection = $this->productClassCollectionFactory->create();
-        
+
         $this->collectionProcessor->process($criteria, $collection);
-        
+
         $searchResults = $this->searchResultsFactory->create();
         $searchResults->setSearchCriteria($criteria);
-        
+
         $items = [];
         foreach ($collection as $model) {
             $items[] = $model;
         }
-        
+
         $searchResults->setItems($items);
         $searchResults->setTotalCount($collection->getSize());
         return $searchResults;

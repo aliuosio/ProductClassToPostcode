@@ -1,11 +1,11 @@
 <?php
 /**
- * Copyright © Copyright (c) 2024 BIWAC All rights reserved.
+ * Copyright © Copyright (c) 2024 Osio All rights reserved.
  * See COPYING.txt for license details.
  */
 declare(strict_types=1);
 
-namespace BIWAC\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
+namespace Osio\ProductClassToPostcode\Controller\Adminhtml\ProductClass;
 
 use Magento\Framework\Exception\LocalizedException;
 
@@ -39,7 +39,7 @@ class Save extends \Magento\Backend\App\Action
         if ($data) {
             $id = $this->getRequest()->getParam('entity_id');
 
-            $model = $this->_objectManager->create(\BIWAC\ProductClassToPostcode\Model\ProductClass::class)->load($id);
+            $model = $this->_objectManager->create(\Osio\ProductClassToPostcode\Model\ProductClass::class)->load($id);
             if (!$model->getId() && $id) {
                 $this->messageManager->addErrorMessage(__('This Productclass no longer exists.'));
                 return $resultRedirect->setPath('*/*/');
@@ -50,7 +50,7 @@ class Save extends \Magento\Backend\App\Action
             try {
                 $model->save();
                 $this->messageManager->addSuccessMessage(__('You saved the Productclass.'));
-                $this->dataPersistor->clear('biwac_productclasstopostcode_productclass');
+                $this->dataPersistor->clear('osio_productclasstopostcode_productclass');
 
                 if ($this->getRequest()->getParam('back')) {
                     return $resultRedirect->setPath('*/*/edit', ['entity_id' => $model->getId()]);
@@ -62,7 +62,7 @@ class Save extends \Magento\Backend\App\Action
                 $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the Productclass.'));
             }
 
-            $this->dataPersistor->set('biwac_productclasstopostcode_productclass', $data);
+            $this->dataPersistor->set('osio_productclasstopostcode_productclass', $data);
             return $resultRedirect->setPath('*/*/edit', ['entity_id' => $this->getRequest()->getParam('entity_id')]);
         }
         return $resultRedirect->setPath('*/*/');

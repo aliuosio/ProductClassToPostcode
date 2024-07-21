@@ -3,7 +3,7 @@
 	<update handle="styles"/>
 	<body>
 		<referenceContainer name="content">
-			<uiComponent name="biwac_productclasstopostcode_productclass_listing"/>
+			<uiComponent name="osio_productclasstopostcode_productclass_listing"/>
 		</referenceContainer>
 	</body>
 </page>
