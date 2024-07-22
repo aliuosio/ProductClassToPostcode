@@ -2,7 +2,7 @@
     "name": "aliuosio/magento-product-class-to-postcode",
     "description": "Product Class To Postcode",
     "type": "magento2-module",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "license": "MIT",
     "authors": [
         {
